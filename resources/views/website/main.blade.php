@@ -206,7 +206,6 @@
 </head>
 
 <body>
-
     <!-- Header Section -->
     <header>
         <div class="header-container">
@@ -262,7 +261,8 @@
                                         </ul>
                                     </li>
 
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('quality') }}">{{ t('Quality') }}</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="{{ route('quality') }}">{{ t('Quality') }}</a></li>
 
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('Surgeon-corner') }}">{{ t('Surgeon Corner') }}</a></li>
@@ -389,7 +389,8 @@
                             <li><a href="{{ route('products-data', 1) }}"
                                     class="footer__link-text">{{ t('Products') }}</a></li>
                             <li><a href="{{ route('quality') }}" class="footer__link-text">{{ t('Quality') }}</a></li>
-                            <li><a href="{{ route('Surgeon-corner') }}" class="footer__link-text">{{ t('Surgeon Corner') }}</a></li>
+                            <li><a href="{{ route('Surgeon-corner') }}"
+                                    class="footer__link-text">{{ t('Surgeon Corner') }}</a></li>
                             <li><a href="{{ route('contact-us') }}" class="footer__link-text">{{ t('Contact Us') }}</a>
                             </li>
                         </ul>
@@ -494,7 +495,8 @@
     @endphp
 
     @if(!empty($whatsappClean))
-        <a href="https://wa.me/{{ $whatsappClean }}" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" title="Chat on WhatsApp">
+        <a href="https://wa.me/{{ $whatsappClean }}" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
+            title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     @endif
