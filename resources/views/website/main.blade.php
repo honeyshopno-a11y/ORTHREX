@@ -190,6 +190,18 @@
             transform: scale(1.08);
             box-shadow: 2px 6px 16px rgba(37, 211, 102, 0.45);
         }
+
+        /* Sticky Header on Scroll */
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
