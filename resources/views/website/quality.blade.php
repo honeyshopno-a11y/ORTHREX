@@ -30,32 +30,6 @@
     <section class="quality-section">
         <div class="quality-container">
 
-            <!-- <h2 class="quality-heading">{{ t('Quality Certifications') }}</h2>  -->
-
-            <!-- <div class="quality-grid">
-
-                        @forelse ($qualities as $item)
-                            @if ($item->pdf)
-                                <a href="{{ asset($item->pdf) }}" target="_blank" class="quality-card">
-                                    <div class="quality-card__img-wrap">
-                                        <img src="{{ asset($item->image) }}" alt="{{ $item->title }}" loading="lazy">
-                                    </div>
-
-                                </a>
-                            @else
-                                <div class="quality-card quality-card--no-link">
-                                    <div class="quality-card__img-wrap">
-                                        <img src="{{ asset($item->image) }}" alt="{{ $item->title }}" loading="lazy">
-                                    </div>
-
-                                </div>
-                            @endif
-                        @empty
-                            <p class="text-center">{{ t('No quality certifications available yet.') }}</p>
-                        @endforelse
-
-                    </div> -->
-
             <div class="quality-grid">
 
                 @forelse ($qualities as $item)
@@ -82,7 +56,6 @@
 
                     <div class="no-data-found">
                         <img src="{{ asset('image/nodatafound.jpg') }}" alt="No Data Found">
-                        <!-- <h4>{{ t('No Quality Certificates Found') }}</h4> -->
                     </div>
 
                 @endforelse
@@ -107,7 +80,7 @@
 
         .quality-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 35px;
         }
 
@@ -172,7 +145,17 @@
             transform: none;
         }
 
+        @media (max-width: 992px) {
+            .quality-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media(max-width:768px) {
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
             .quality-card__img-wrap {
                 height: 320px;
             }
