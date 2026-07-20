@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AgeCriteriaController;
 use App\Http\Controllers\Api\InquiryFormController;
 use App\Http\Controllers\AuthController;
@@ -107,6 +108,11 @@ Route::middleware('auth')->group(function () {
     Route::get('quality/{slug}', [QualityController::class, 'qualityAddEdit'])->name('quality-add-edit');
     Route::post('quality-store', [QualityController::class, 'qualityStore'])->name('quality-store');
     Route::get('quality-delete/{id}', [QualityController::class, 'qualityDelete'])->name('quality-delete');
+
+
+    Route::get('about', [AboutController::class, 'about'])->name('about');
+    Route::post('about-store', [AboutController::class, 'aboutStore'])->name('about-store');
+
 
 });
 

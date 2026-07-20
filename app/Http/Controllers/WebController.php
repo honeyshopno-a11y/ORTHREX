@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\AgeCriteria;
 use App\Models\Category;
 use App\Models\Contact;
@@ -29,9 +30,14 @@ class WebController extends Controller
         return view('website.index', compact('slider'));
     }
 
+
     public function aboutUs()
     {
-        return view("website.about-us");
+        $about_data = AboutUs::first();
+
+        return view("website.about-us", [
+            'about_data' => $about_data,
+        ]);
     }
 
 

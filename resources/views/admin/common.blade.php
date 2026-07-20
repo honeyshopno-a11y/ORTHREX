@@ -304,6 +304,13 @@
                         </a>
                     </li>
 
+                    <li class="menu-item {{ request()->is('about*') ? 'active' : '' }}">
+                        <a href="{{ route('about') }}" class="menu-link">
+                            <i class='bxr bx-building-house menu-icon tf-icons'></i>
+                            <div data-i18n="Analytics">About Us</div>
+                        </a>
+                    </li>
+
 
                     <li class="menu-item {{ request()->is('category*') ? 'active' : '' }}">
                         <a href="{{ route('category-list') }}" class="menu-link">
@@ -344,7 +351,8 @@
 
                     <!-- Logout Button directly below Contact -->
                     <li class="menu-item">
-                        <a href="{{ route('logout') }}" class="menu-link " onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <a href="{{ route('logout') }}" class="menu-link "
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class='menu-icon tf-icons bx bx-power-off'></i>
                             <div class="fw-semibold">Log Out</div>
                         </a>
@@ -369,11 +377,13 @@
                         </a>
                     </div>
 
-                    <div class="navbar-nav-right d-flex align-items-center justify-content-between w-100" id="navbar-collapse">
+                    <div class="navbar-nav-right d-flex align-items-center justify-content-between w-100"
+                        id="navbar-collapse">
                         <!-- Welcome Admin Message -->
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
-                                <span class="fw-bold fs-5 text-dark">Welcome <span style="color: var(--theme-color-dark);">Admin</span></span>
+                                <span class="fw-bold fs-5 text-dark">Welcome <span
+                                        style="color: var(--theme-color-dark);">Admin</span></span>
                             </div>
                         </div>
 
@@ -389,9 +399,11 @@
                             </div>
 
                             <!-- Logged-in User Name (Replaces avatar image) -->
-                            <div class="user-name-display d-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-light border ms-2">
+                            <div
+                                class="user-name-display d-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-light border ms-2">
                                 <i class='bx bx-user-circle fs-4' style="color: var(--theme-color);"></i>
-                                <span class="fw-semibold text-dark text-capitalize">{{ Auth::user()->name ?? 'Admin' }}</span>
+                                <span
+                                    class="fw-semibold text-dark text-capitalize">{{ Auth::user()->name ?? 'Admin' }}</span>
                             </div>
                         </div>
                     </div>

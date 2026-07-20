@@ -71,9 +71,12 @@
                     </div> --}}
 
                 </div>
+                <div class="col-12 mt-2">
+                    <button type="submit" class="btn btn-primary mt-4">SUBMIT</button>
+                </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-4">SUBMIT</button>
+
         </form>
     </div>
 
